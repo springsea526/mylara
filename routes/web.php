@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('login',"loginController@login");
+Route::get('show/{user}/{password}',"loginController@show");
+Route::get('first',"indexController@index");
