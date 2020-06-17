@@ -10,10 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/',"welcomeController@index");
+Route::get('/',function(){
+	//return Greeting::first()->body;
+	 return App\Greeting::first()->body;
+	//return "hello world";
 });
+
 Route::get('login',"loginController@login");
 Route::get('show/{user}/{password}',"loginController@show");
 Route::get('first',"indexController@index");
